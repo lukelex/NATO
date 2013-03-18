@@ -2,10 +2,10 @@
 
 The NATO phonetic alphabet, more accurately known as the International
 Radiotelephony Spelling Alphabet, is the most widely used spelling
-alphabet. NATO assigns code words acrophonically to the letters of the 
-English alphabet so that critical combinations of letters and numbers 
-can be pronounced and understood by those who transmit and receive 
-voice messages by radio or telephone regardless of their native 
+alphabet. NATO assigns code words acrophonically to the letters of the
+English alphabet so that critical combinations of letters and numbers
+can be pronounced and understood by those who transmit and receive
+voice messages by radio or telephone regardless of their native
 language or the presence of transmission static.
 
 The 26 code words in the NATO phonetic alphabet are assigned to the 26
@@ -42,7 +42,7 @@ letters of the English alphabet in alphabetical order as follows:
 
 Add this line to your application's Gemfile:
 
-```
+```ruby
 gem 'NATO'
 ```
 
@@ -54,7 +54,7 @@ $ bundle
 
 Or install it yourself as:
 
-```ruby
+```
 $ gem install NATO
 ```
 
