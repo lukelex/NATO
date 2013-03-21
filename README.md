@@ -60,7 +60,10 @@ $ gem install NATO
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+text = Text.new 'a8h43lnr0'
+text.to_nato # "Alfa 8 Hotel 4 3 Lima November Romeo 0"
+```
 
 ## Contributing
 
