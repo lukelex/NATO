@@ -15,6 +15,6 @@ class NATO::Parser
 
 private
   def is_numeric?(obj)
-    obj.to_s.match(/\A[+-]?\d+?(\.\d+)?\Z/) == nil ? false : true
+    obj.to_s.match(/\A[+-]?\d+?(\.\d+)?\Z/)
   end
 end

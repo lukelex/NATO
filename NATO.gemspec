@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = NATO::VERSION
   spec.authors       = ["Lukas Alexandre"]
   spec.email         = ["lukasalexandre@me.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{NATO Phonetic Alphabet conversion tool}
+  spec.summary       = %q{NATO Phonetic Alphabet conversion tool}
   spec.homepage      = "https://github.com/lukelex/NATO"
   spec.license       = "MIT"
 
