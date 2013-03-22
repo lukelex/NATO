@@ -8,7 +8,7 @@ class NATO::Parser
       if is_numeric? piece
         piece
       else
-        NATO::DICTIONARY[piece.to_sym].to_s || piece
+        NATO::DICTIONARY[piece.to_sym].to_s
       end
     end.join ' '
   end
