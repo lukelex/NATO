@@ -18,6 +18,18 @@ module NATO
 
         Then { nato.should == '7 Tango Papa 3 November Yankee' }
       end
+
+      describe "medium sentence without numbers" do
+        When(:nato) { parser.natify 'mlozjuwswkrhf' }
+
+        Then { nato.should == 'Mike Lima Oscar Zulu Juliett Uniform Whiskey Sierra Whiskey Kilo Romeo Hotel Foxtrot' }
+      end
+
+      describe "medium sentence with numbers" do
+        When(:nato) { parser.natify 'ml01juws846hf' }
+
+        Then { nato.should == 'Mike Lima 0 1 Juliett Uniform Whiskey Sierra 8 4 6 Hotel Foxtrot' }
+      end
     end
   end
 end
