@@ -15,7 +15,7 @@ module NATO
     :m => :Mike,
     :n => :November,
     :o => :Oscar,
-    :o => :Papa,
+    :p => :Papa,
     :q => :Quebec,
     :r => :Romeo,
     :s => :Sierra,
