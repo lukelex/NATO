@@ -1,5 +1,7 @@
 # NATO
 
+[![Code Climate](https://codeclimate.com/github/lukelex/NATO.png)](https://codeclimate.com/github/lukelex/NATO)
+
 The NATO phonetic alphabet, more accurately known as the International
 Radiotelephony Spelling Alphabet, is the most widely used spelling
 alphabet. NATO assigns code words acrophonically to the letters of the

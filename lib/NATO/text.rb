@@ -1,5 +1,5 @@
 class NATO::Text
-  attr_reader :original, :natified
+  attr_reader :original, :natified, :pronunciation
 
   def initialize(sentence)
     @original = sentence

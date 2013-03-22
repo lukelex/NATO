@@ -13,22 +13,22 @@ module NATO
         Then { nato.should == 'Alfa Bravo Charlie Delta Echo' }
       end
 
-      describe "short sentence with numbers" do
+      describe "short sentence" do
         When(:nato) { parser.natify '7tp3ny' }
 
-        Then { nato.should == '7 Tango Papa 3 November Yankee' }
+        Then { nato.should == 'Seven Tango Papa Three November Yankee' }
       end
 
-      describe "medium sentence without numbers" do
+      describe "medium sentence" do
         When(:nato) { parser.natify 'mlozjuwswkrhf' }
 
         Then { nato.should == 'Mike Lima Oscar Zulu Juliett Uniform Whiskey Sierra Whiskey Kilo Romeo Hotel Foxtrot' }
       end
 
-      describe "medium sentence with numbers" do
+      describe "medium sentence" do
         When(:nato) { parser.natify 'ml01juws846hf' }
 
-        Then { nato.should == 'Mike Lima 0 1 Juliett Uniform Whiskey Sierra 8 4 6 Hotel Foxtrot' }
+        Then { nato.should == 'Mike Lima Zero One Juliett Uniform Whiskey Sierra Eight Four Six Hotel Foxtrot' }
       end
     end
   end
