@@ -10,8 +10,7 @@ can be pronounced and understood by those who transmit and receive
 voice messages by radio or telephone regardless of their native
 language or the presence of transmission static.
 
-The 26 code words in the NATO phonetic alphabet are assigned to the 26
-letters of the English alphabet in alphabetical order as follows:
+The 26 code words and 10 numbers in the NATO phonetic alphabet are assigned to their respectives in the English alphabet in alphabetical order as follows:
 
 * Alfa
 * Bravo
@@ -39,6 +38,16 @@ letters of the English alphabet in alphabetical order as follows:
 * X-ray
 * Yankee
 * Zulu
+* One
+* Two
+* Three
+* Four
+* Five
+* Six
+* Seven
+* Eight
+* Nine
+* Zero
 
 ## Installation
 
@@ -64,7 +73,8 @@ $ gem install NATO
 
 ```ruby
 text = Text.new 'a8h43lnr0'
-text.to_nato # "Alfa 8 Hotel 4 3 Lima November Romeo 0"
+text.to_nato # "Alfa Eight Hotel Four Three Lima November Romeo Zero"
+text.pronunciation #'AL-FAH AIT HOH-TEL FOW-ER TREE LEE-MAH NO-VEM-BER ROW-ME-OH ZEE-RO'
 ```
 
 ## Contributing
