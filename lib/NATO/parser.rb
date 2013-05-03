@@ -5,7 +5,7 @@ class NATO::Parser
 
   def natify(text)
     text.split('').map do |piece|
-      NATO::DICTIONARY[piece.to_sym].to_s
-    end.join ' '
+      NATO::DICTIONARY[piece.to_sym]
+    end
   end
 end

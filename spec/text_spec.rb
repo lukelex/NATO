@@ -13,5 +13,11 @@ module NATO
     describe "#to_s" do
       Then { text.to_s.should == ['a8h43lnr0', 'Alfa Eight Hotel Four Three Lima November Romeo Zero'] }
     end
+
+    describe '#pronunciation' do
+      Then { text.should respond_to :pronunciation }
+
+      And { text.pronunciation.should == 'AL-FAH AIT HOH-TEL FOW-ER TREE LEE-MAH NO-VEM-BER ROW-ME-OH ZEE-RO' }
+    end
   end
 end

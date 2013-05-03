@@ -3,7 +3,19 @@ class NATO::Text
 
   def initialize(sentence)
     @original = sentence
-    @natified = NATO::Parser.instance.natify sentence
+
+    sentence_natified = NATO::Parser.instance.natify sentence
+
+    @natified = sentence_natified.map { |item| item.first }.join ' '
+    @pronunciation = sentence_natified.map { |item| item.last }.join ' '
+  end
+
+  def natified
+    @natified ||= ''
+  end
+
+  def pronunciation
+    @pronunciation ||= ''
   end
 
   def to_nato
