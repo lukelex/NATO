@@ -1,8 +1,6 @@
 require "NATO/version"
 
-require 'NATO/text'
-require 'NATO/parser'
-require 'NATO/dictionary'
+require "NATO/text"
 
 module NATO
   # Your code goes here...

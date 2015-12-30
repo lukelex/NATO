@@ -1,4 +1,5 @@
-require 'singleton'
+require "singleton"
+require_relative "dictionary"
 
 class NATO::Parser
   include Singleton

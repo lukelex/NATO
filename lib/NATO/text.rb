@@ -1,3 +1,5 @@
+require_relative "parser"
+
 class NATO::Text
   attr_reader :original, :natified, :pronunciation
 
