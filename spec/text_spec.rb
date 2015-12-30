@@ -1,23 +1,29 @@
-require 'spec_helper'
+require "spec_helper"
 
 module NATO
   describe Text do
-    Given(:text) { Text.new 'a8h43lnr0' }
+    Given(:text) { Text.new "a8h43lnr0" }
 
     describe "#to_nato" do
-      Then { text.should respond_to :to_nato }
+      Then { expect(text).to respond_to :to_nato }
 
-      And { text.to_nato.should == 'Alfa Eight Hotel Four Three Lima November Romeo Zero' }
+      And { expect(text.to_nato).to eq "Alfa Eight Hotel Four Three Lima November Romeo Zero" }
     end
 
     describe "#to_s" do
-      Then { text.to_s.should == ['a8h43lnr0', 'Alfa Eight Hotel Four Three Lima November Romeo Zero'] }
+      Then do
+        expect(text.to_s).to eq \
+          ["a8h43lnr0", "Alfa Eight Hotel Four Three Lima November Romeo Zero"]
+      end
     end
 
-    describe '#pronunciation' do
-      Then { text.should respond_to :pronunciation }
+    describe "#pronunciation" do
+      Then { expect(text).to respond_to :pronunciation }
 
-      And { text.pronunciation.should == 'AL-FAH AIT HOH-TEL FOW-ER TREE LEE-MAH NO-VEM-BER ROW-ME-OH ZEE-RO' }
+      And do
+        expect(text.pronunciation).to eq \
+          "AL-FAH AIT HOH-TEL FOW-ER TREE LEE-MAH NO-VEM-BER ROW-ME-OH ZEE-RO"
+      end
     end
   end
 end

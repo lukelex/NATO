@@ -1,4 +1,8 @@
-require 'rspec'
-require 'rspec/given'
+require "rspec"
+require "rspec/given"
 
-require 'NATO'
+require "NATO"
+
+RSpec.configure do |config|
+  config.raise_errors_for_deprecations!
+end
