@@ -1,4 +1,5 @@
 require_relative "parser"
+require_relative "say"
 
 module NATO
   class Text
@@ -12,6 +13,10 @@ module NATO
 
     alias_method :to_nato, :natified
     alias_method :to_s, :to_nato
+
+    def say
+      NATO::Say.(self)
+    end
 
     private
 
