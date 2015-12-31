@@ -7,23 +7,19 @@ module NATO
     def initialize(sentence)
       @original = sentence
 
-      sentence_natified = Parser.instance.natify sentence
-
-      @natified = sentence_natified.map { |item| item.first }.join ' '
-      @pronunciation = sentence_natified.map { |item| item.last }.join ' '
+      natify sentence
     end
 
-    def natified
-      @natified ||= ""
-    end
-
-    def pronunciation
-      @pronunciation ||= ""
-    end
-
-    def to_nato
-      @natified
-    end
+    alias_method :to_nato, :natified
     alias_method :to_s, :to_nato
+
+    private
+
+    def natify(sentence)
+      Parser.instance.natify(sentence).tap do |natified|
+        @natified = natified.map(&:first).join(" ")
+        @pronunciation = natified.map(&:last).join(" ")
+      end
+    end
   end
 end

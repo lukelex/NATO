@@ -7,8 +7,10 @@ module NATO
 
     def natify(text)
       text.split("").map do |piece|
-        DICTIONARY.fetch(piece.to_sym)
+        DICTIONARY.fetch piece.to_sym
       end
     end
+
+    alias_method :to_nato, :natify
   end
 end

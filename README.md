@@ -54,7 +54,7 @@ The 26 code words and 10 numbers in the NATO phonetic alphabet are assigned to t
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'NATO'
+gem "NATO"
 ```
 
 And then execute:
@@ -72,9 +72,22 @@ $ gem install NATO
 ## Usage
 
 ```ruby
-text = Text.new 'a8h43lnr0'
+require "NATO"
+
+text = NATO::Text.new "a8h43lnr0"
 text.to_nato # "Alfa Eight Hotel Four Three Lima November Romeo Zero"
 text.pronunciation #'AL-FAH AIT HOH-TEL FOW-ER TREE LEE-MAH NO-VEM-BER ROW-ME-OH ZEE-RO'
+```
+
+Or, if you rather use refinements:
+```ruby
+require "NATO/refined"
+
+module YourApp
+  using NATO::Refined
+
+  "a8h43lnr0".to_nato # "Alfa Eight Hotel Four Three Lima November Romeo Zero"
+end
 ```
 
 ## Contributing
