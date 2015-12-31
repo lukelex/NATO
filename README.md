@@ -90,6 +90,24 @@ module YourApp
 end
 ```
 
+### Text-to-speach
+
+You can also use the text-to-speech system tool:
+```ruby
+require "NATO"
+
+NATO::Text.new("bzt").say # pipes out to "say" on mac or "espeak" on linux
+```
+
+### CLI
+
+```ruby
+gem install nato
+
+nato --convert "bctz" # Bravo Charlie Tango Zulu
+nato --say "bctz" # uses system text-to-speech tool
+```
+
 ## Contributing
 
 1. Fork it

@@ -7,7 +7,7 @@ module NATO
 
     def natify(text)
       text.split("").map do |piece|
-        DICTIONARY.fetch piece.to_sym
+        DICTIONARY.fetch piece.downcase.to_sym
       end
     end
 

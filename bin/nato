@@ -1,0 +1,22 @@
+#! /usr/bin/env ruby
+
+require "NATO"
+require "slop"
+
+Slop.parse do |o|
+  o.on "-c", "--convert", "converts to its NATO representation" do
+    print NATO::Text.new(ARGV[1]).to_s
+  end
+
+  o.on "-s", "--say", "converts and uses the system text-to-speach API" do
+    NATO::Text.new(ARGV[1]).say
+  end
+
+  o.on "-h", "--help" do
+    puts o
+  end
+
+  o.on "-v", "--version", "print the version" do
+    puts "NATO #{NATO::VERSION}"
+  end
+end
