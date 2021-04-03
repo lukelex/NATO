@@ -102,7 +102,7 @@ NATO::Text.new("bzt").say # pipes out to "say" on mac or "espeak" on linux
 ### CLI
 
 ```bash
-$ gem install nato
+$ gem install NATO
 $ nato --convert "bctz" # Bravo Charlie Tango Zulu
 $ nato --say "bctz" # uses system text-to-speech tool
 ```
